@@ -67,11 +67,10 @@ pip install hacker_news_email_sender
 ## Usage
 
 ```py
-from hacker_news_email_sender import BaseClass
-from hacker_news_email_sender import base_function
+from hacker_news_email_sender import News_Extractor
 
-BaseClass().base_method()
-base_function()
+News_Extractor.extract_news()
+News_Extractor.send_email()
 ```
 
 ```bash
