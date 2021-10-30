@@ -1,6 +1,8 @@
+import os
 import requests
 import smtplib
 import datetime
+from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -9,6 +11,8 @@ class News_extractor:
     def __init__(self) -> None:
         self.current_time = datetime.datetime.now()
         self.content = ''
+        self.SERVER = 'smtp.gmail.com'
+        self.PORT = 587
 
     def extract_news(self, url: str='https://news.ycombinator.com/') -> str:
         '''
@@ -30,6 +34,7 @@ class News_extractor:
         response = requests.get(url)
         content = response.content
         soup = BeautifulSoup(content, 'html.parser')
+
         for i, tag in enumerate(soup.find_all(
             'td',
             attrs={'class': 'title', 'valign': ''}
@@ -44,3 +49,42 @@ class News_extractor:
         self.content += ('<br><br>End of Message')
 
         return self.content
+
+    # USAR VARIAVAIES DE AMBIENTE AQUI
+    def send_email(self) -> None:
+        '''
+        Sends the email with the extracted news to someone's email.
+        
+        Arguments
+        ---------
+
+        Return
+        --------
+        '''
+        load_dotenv()
+        from_ = os.getenv('SENDER')
+        to_ = os.getenv('RECEIVER')
+        pass_ = os.getenv('EMAIL_PASSWORD')
+
+        message = MIMEMultipart()
+        message['Subject'] = 'Top News Stories HN [Automated Email]'
+        message['Subject'] += ' '
+        message['Subject'] += str(self.current_time.day) + '-' + str(self.current_time.year)
+
+        message['From'] = from_
+        message['To'] = to_
+        message.attach(MIMEText(self.content, 'html'))
+
+        print('Initiating server...')
+
+        server = smtplib.SMTP(self.SERVER, self.PORT)
+        server.set_debuglevel(1)
+        server.ehlo()
+        server.starttls()
+        server.login(from_, pass_)
+        server.sendmail(from_, to_, message.as_string())
+
+        print('Email sent...')
+
+        server.quit()
+        return
