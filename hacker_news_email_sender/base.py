@@ -1,7 +1,7 @@
 """
-project_name base module.
+hacker_news_email_sender base module.
 
-This is the principal module of the project_name project.
+This is the principal module of the hacker_news_email_sender project.
 here you put your main classes and objects.
 
 Be creative! do whatever you want!

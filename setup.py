@@ -1,4 +1,4 @@
-"""Python setup.py for project_name package"""
+"""Python setup.py for hacker_news_email_sender package"""
 import io
 import os
 from setuptools import find_packages, setup
@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 
 def read(*paths, **kwargs):
     """Read the contents of a text file safely.
-    >>> read("project_name", "VERSION")
+    >>> read("hacker_news_email_sender", "VERSION")
     '0.1.0'
     >>> read("README.md")
     ...
@@ -30,17 +30,17 @@ def read_requirements(path):
 
 
 setup(
-    name="project_name",
-    version=read("project_name", "VERSION"),
-    description="project_description",
-    url="https://github.com/author_name/project_urlname/",
+    name="hacker_news_email_sender",
+    version=read("hacker_news_email_sender", "VERSION"),
+    description="Awesome hacker_news_email_sender created by WagnoLeaoSergio",
+    url="https://github.com/WagnoLeaoSergio/hacker_news_email_sender/",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
-    author="author_name",
+    author="WagnoLeaoSergio",
     packages=find_packages(exclude=["tests", ".github"]),
     install_requires=read_requirements("requirements.txt"),
     entry_points={
-        "console_scripts": ["project_name = project_name.__main__:main"]
+        "console_scripts": ["hacker_news_email_sender = hacker_news_email_sender.__main__:main"]
     },
     extras_require={"test": read_requirements("requirements-test.txt")},
 )
