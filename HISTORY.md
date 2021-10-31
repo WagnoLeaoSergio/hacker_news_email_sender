@@ -4,6 +4,8 @@ Changelog
 
 (unreleased)
 ------------
+- Main Gituhb workflow updated python3.9 -> python3.6. [WagnoLeaoSergio]
+- Release: version 0.0.2 🚀 [WagnoLeaoSergio]
 - Requirements.txt updated. [WagnoLeaoSergio]
 - Release: version 0.0.2 🚀 [WagnoLeaoSergio]
 
