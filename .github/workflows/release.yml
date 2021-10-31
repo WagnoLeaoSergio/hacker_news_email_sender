@@ -31,7 +31,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: yaananth/twine-upload@v1
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
@@ -41,9 +40,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install setuptools wheel twine
     - name: Build and publish
+      shell: bash
       env:
-        RUNNER: ${{ toJson(runner) }}
-        SECRETS: ${{ toJson(secrets) }}
-      #run: |
-        #python setup.py sdist bdist_wheel
-        #twine upload -u __token__ -p "$TWINE_PASSWORD" dist/*
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+      run: |
+        python setup.py sdist bdist_wheel
+        twine upload -u __token__ -p "$TWINE_PASSWORD" dist/*
