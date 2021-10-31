@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+
 class News_extractor:
     def __init__(self) -> None:
         self.current_time = datetime.datetime.now()
@@ -40,7 +41,8 @@ class News_extractor:
             attrs={'class': 'title', 'valign': ''}
         )):
             if tag.text != 'More':
-                extracted_content += ((str(i+1) + ' :: ' + tag.text + "\n" + '<br>'))
+                extracted_content += ( ( str(i+1) + ' :: ' + tag.text + \
+                "\n" + '<br>' ) )
             else:
                 extracted_content += ''
 
@@ -54,7 +56,7 @@ class News_extractor:
     def send_email(self) -> None:
         '''
         Sends the email with the extracted news to someone's email.
-        
+ 
         Arguments
         ---------
 
@@ -69,7 +71,8 @@ class News_extractor:
         message = MIMEMultipart()
         message['Subject'] = 'Top News Stories HN [Automated Email]'
         message['Subject'] += ' '
-        message['Subject'] += str(self.current_time.day) + '-' + str(self.current_time.year)
+        message['Subject'] += str(self.current_time.day) + \
+        '-' + str(self.current_time.year)
 
         message['From'] = from_
         message['To'] = to_
