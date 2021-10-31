@@ -62,9 +62,9 @@ class News_extractor:
         --------
         '''
         load_dotenv()
-        from_ = os.getenv('SENDER')
-        to_ = os.getenv('RECEIVER')
-        pass_ = os.getenv('EMAIL_PASSWORD')
+        from_ = str(os.getenv('SENDER'))
+        to_ = str(os.getenv('RECEIVER'))
+        pass_ = str(os.getenv('EMAIL_PASSWORD'))
 
         message = MIMEMultipart()
         message['Subject'] = 'Top News Stories HN [Automated Email]'
