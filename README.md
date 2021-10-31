@@ -55,6 +55,7 @@ See also
 
 [![codecov](https://codecov.io/gh/WagnoLeaoSergio/hacker_news_email_sender/branch/main/graph/badge.svg?token=hacker_news_email_sender_token_here)](https://codecov.io/gh/WagnoLeaoSergio/hacker_news_email_sender)
 [![CI](https://github.com/WagnoLeaoSergio/hacker_news_email_sender/actions/workflows/main.yml/badge.svg)](https://github.com/WagnoLeaoSergio/hacker_news_email_sender/actions/workflows/main.yml)
+[!PYPI](https://img.shields.io/pypi/v/hacker-news-email-sender?style=for-the-badge)
 
 Awesome hacker_news_email_sender created by WagnoLeaoSergio
 
@@ -63,6 +64,11 @@ Awesome hacker_news_email_sender created by WagnoLeaoSergio
 ```bash
 pip install hacker_news_email_sender
 ```
+
+You also have to create a .env file and set the `SENDER`, `RECEIVER` and `EMAIL_PASSWORD` variables wih the properly values.
+
+Note: If you are going to use Gmail to send the news you firstly have to go into your Google Account -> security and
+enable the access for less secure apps.
 
 ## Usage
 
