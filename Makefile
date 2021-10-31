@@ -35,7 +35,7 @@ lint:             ## Run pep8, black, mypy linters.
 	$(ENV_PREFIX)flake8 hacker_news_email_sender/
 	$(ENV_PREFIX)black -l 79 --check hacker_news_email_sender/
 	$(ENV_PREFIX)black -l 79 --check tests/
-	$(ENV_PREFIX)mypy --install-types --ignore-missing-imports hacker_news_email_sender/
+	$(ENV_PREFIX)mypy --install-types --non-interactive --ignore-missing-imports hacker_news_email_sender/
 
 .PHONY: test
 test: lint        ## Run tests and generate coverage report.
