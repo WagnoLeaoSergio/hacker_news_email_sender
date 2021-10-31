@@ -2,6 +2,11 @@ Changelog
 =========
 
 
+0.0.11 (2021-10-31)
+-------------------
+- Release: version 0.0.10 🚀 [WagnoLeaoSergio]
+
+
 0.0.10 (2021-10-31)
 -------------------
 - Release: version 0.0.9 🚀 [WagnoLeaoSergio]
