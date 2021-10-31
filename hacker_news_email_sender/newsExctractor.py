@@ -15,7 +15,7 @@ class News_extractor:
         self.SERVER = 'smtp.gmail.com'
         self.PORT = 587
 
-    def extract_news(self, url: str='https://news.ycombinator.com/') -> str:
+    def extract_news(self, url: str = 'https://news.ycombinator.com/') -> str:
         '''
         Scraps the Hacker News WebSite and creates a
         HTML string with the titles of the newest news.
@@ -41,8 +41,9 @@ class News_extractor:
             attrs={'class': 'title', 'valign': ''}
         )):
             if tag.text != 'More':
-                extracted_content += ( ( str(i+1) + ' :: ' + tag.text + \
-                "\n" + '<br>' ) )
+                extracted_content += str(i+1)
+                extracted_content += ' :: '
+                extracted_content += tag.text + "\n" + '<br>'
             else:
                 extracted_content += ''
 
@@ -56,7 +57,7 @@ class News_extractor:
     def send_email(self) -> None:
         '''
         Sends the email with the extracted news to someone's email.
- 
+
         Arguments
         ---------
 
@@ -72,7 +73,7 @@ class News_extractor:
         message['Subject'] = 'Top News Stories HN [Automated Email]'
         message['Subject'] += ' '
         message['Subject'] += str(self.current_time.day) + \
-        '-' + str(self.current_time.year)
+            '-' + str(self.current_time.year)
 
         message['From'] = from_
         message['To'] = to_

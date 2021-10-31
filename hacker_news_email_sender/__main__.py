@@ -1,4 +1,3 @@
-import argparse  # pragma: no cover
 from . import newsExctractor
 
 
@@ -18,7 +17,6 @@ def main() -> None:  # pragma: no cover
         * List all available tasks
         * Run an application (Flask, FastAPI, Django, etc.)
     """
-
 
     extractor = newsExctractor.News_extractor()
     extractor.extract_news()
