@@ -4,6 +4,8 @@ Changelog
 
 (unreleased)
 ------------
+- String convertion for enviroment variables. [WagnoLeaoSergio]
+- Release: version 0.0.2 🚀 [WagnoLeaoSergio]
 - Main Gituhb workflow updated python3.9 -> python3.6. [WagnoLeaoSergio]
 - Release: version 0.0.2 🚀 [WagnoLeaoSergio]
 - Requirements.txt updated. [WagnoLeaoSergio]
