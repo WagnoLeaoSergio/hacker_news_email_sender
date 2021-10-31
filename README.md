@@ -55,7 +55,7 @@ See also
 
 [![codecov](https://codecov.io/gh/WagnoLeaoSergio/hacker_news_email_sender/branch/main/graph/badge.svg?token=hacker_news_email_sender_token_here)](https://codecov.io/gh/WagnoLeaoSergio/hacker_news_email_sender)
 [![CI](https://github.com/WagnoLeaoSergio/hacker_news_email_sender/actions/workflows/main.yml/badge.svg)](https://github.com/WagnoLeaoSergio/hacker_news_email_sender/actions/workflows/main.yml)
-[!PYPI](https://img.shields.io/pypi/v/hacker-news-email-sender?style=for-the-badge)
+![PyPI](https://img.shields.io/pypi/v/hacker-news-email-sender)
 
 Awesome hacker_news_email_sender created by WagnoLeaoSergio
 
