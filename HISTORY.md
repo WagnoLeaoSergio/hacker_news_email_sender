@@ -2,6 +2,12 @@ Changelog
 =========
 
 
+0.0.5 (2021-10-31)
+------------------
+- Release GitHub Action updated. [WagnoLeaoSergio]
+- Release: version 0.0.4 🚀 [WagnoLeaoSergio]
+
+
 0.0.4 (2021-10-31)
 ------------------
 - Release: version 0.0.3 🚀 [WagnoLeaoSergio]
