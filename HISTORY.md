@@ -2,6 +2,12 @@ Changelog
 =========
 
 
+(unreleased)
+------------
+- Release Action updated again. [WagnoLeaoSergio]
+- Release: version 0.0.6 🚀 [WagnoLeaoSergio]
+
+
 0.0.6 (2021-10-31)
 ------------------
 - Release Action updated. [WagnoLeaoSergio]
