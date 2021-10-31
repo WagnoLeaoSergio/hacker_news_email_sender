@@ -2,8 +2,9 @@ Changelog
 =========
 
 
-(unreleased)
-------------
+0.0.3 (2021-10-31)
+------------------
+- Release: version 0.0.2 🚀 [WagnoLeaoSergio]
 - Tests on macOS removed from CI WorkFlow. [WagnoLeaoSergio]
 - Project linted. [WagnoLeaoSergio]
 - Parser removed from main function. [WagnoLeaoSergio]
