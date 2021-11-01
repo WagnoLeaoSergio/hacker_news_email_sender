@@ -1,6 +1,6 @@
 # hacker_news_email_sender
 
-[![codecov](https://codecov.io/gh/WagnoLeaoSergio/hacker_news_email_sender/branch/main/graph/badge.svg?token=hacker_news_email_sender_token_here)](https://codecov.io/gh/WagnoLeaoSergio/hacker_news_email_sender)
+[![codecov](https://codecov.io/gh/WagnoLeaoSergio/hacker_news_email_sender/branch/main/graph/badge.svg?token=HK5gZzjWS9)](https://codecov.io/gh/WagnoLeaoSergio/hacker_news_email_sender)
 [![CI](https://github.com/WagnoLeaoSergio/hacker_news_email_sender/actions/workflows/main.yml/badge.svg)](https://github.com/WagnoLeaoSergio/hacker_news_email_sender/actions/workflows/main.yml)
 ![PyPI](https://img.shields.io/pypi/v/hacker-news-email-sender)
 
