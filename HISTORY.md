@@ -2,6 +2,12 @@ Changelog
 =========
 
 
+(unreleased)
+------------
+- README updated. [WagnoLeaoSergio]
+- Release: version 1.0.0 🚀 [WagnoLeaoSergio]
+
+
 1.0.0 (2021-11-01)
 ------------------
 - README updated. [WagnoLeaoSergio]
