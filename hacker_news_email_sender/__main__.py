@@ -25,11 +25,11 @@ def main() -> None:  # pragma: no cover
         help='The email address that will receive the news.'
     )
     args = parser.parse_args()
-
     if args.sender and args.receiver:
         extractor = newsExctractor.News_extractor()
         extractor.extract_news()
         extractor.send_email(args.sender, args.receiver)
+        print("\nEmail successfuly sended!")
 
 
 if __name__ == "__main__":  # pragma: no cover
