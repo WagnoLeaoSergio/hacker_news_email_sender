@@ -65,7 +65,7 @@ Awesome hacker_news_email_sender created by WagnoLeaoSergio
 pip install hacker_news_email_sender
 ```
 
-You also have to create a .env file and set the `SENDER`, `RECEIVER` and `EMAIL_PASSWORD` variables wih the properly values.
+You also have to create a .env file and set the `EMAIL_PASSWORD` variable wih the properly value.
 
 Note: If you are going to use Gmail to send the news you firstly have to go into your Google Account -> security and
 enable the access for less secure apps.
