@@ -53,8 +53,7 @@ class News_extractor:
 
         return self.content
 
-    # USAR VARIAVAIES DE AMBIENTE AQUI
-    def send_email(self) -> None:
+    def send_email(self, from_: str, to_: str) -> None:
         '''
         Sends the email with the extracted news to someone's email.
 
@@ -65,8 +64,6 @@ class News_extractor:
         --------
         '''
         load_dotenv()
-        from_ = str(os.getenv('SENDER'))
-        to_ = str(os.getenv('RECEIVER'))
         pass_ = str(os.getenv('EMAIL_PASSWORD'))
 
         message = MIMEMultipart()
