@@ -53,7 +53,7 @@ class News_extractor:
 
         return self.content
 
-    def send_email(self, from_: str, to_: str) -> None:
+    def send_email(self, from_: str, to_: str) -> bool:
         '''
         Sends the email with the extracted news to someone's email.
 
@@ -63,6 +63,10 @@ class News_extractor:
         Return
         --------
         '''
+        if not self.content:
+            print("Error! No content to send!")
+            return False
+
         load_dotenv()
         pass_ = str(os.getenv('EMAIL_PASSWORD'))
 
@@ -78,14 +82,22 @@ class News_extractor:
 
         print('Initiating server...')
 
-        server = smtplib.SMTP(self.SERVER, self.PORT)
-        server.set_debuglevel(1)
-        server.ehlo()
-        server.starttls()
-        server.login(from_, pass_)
-        server.sendmail(from_, to_, message.as_string())
+        try:
+            server = smtplib.SMTP(self.SERVER, self.PORT)
+            server.set_debuglevel(1)
+            server.ehlo()
+            server.starttls()
+            server.login(from_, pass_)
+            server.sendmail(from_, to_, message.as_string())
+        except (
+            smtplib.SMTPHeloError,
+            smtplib.SMTPAuthenticationError,
+            smtplib.SMTPSenderRefused
+        ):
+            print("Error! Unable to send the email!")
+            return False
 
         print('Email sent...')
 
         server.quit()
-        return
+        return True

@@ -1,3 +1,3 @@
-from .base import BaseClass, base_function
+from .newsExctractor import News_extractor
 
-__all__ = ["BaseClass", "base_function"]
+__all__ = ["News_extractor"]
