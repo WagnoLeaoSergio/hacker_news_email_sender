@@ -2,8 +2,12 @@ Changelog
 =========
 
 
-(unreleased)
-------------
+1.0.1 (2021-11-03)
+------------------
+- Exceptions treatment implemented. [WagnoLeaoSergio]
+- Tests for the News_Extractor created. [WagnoLeaoSergio]
+- Arquivo removidos. [WagnoLeaoSergio]
+- Release: version 1.0.0 🚀 [WagnoLeaoSergio]
 - README updated. [WagnoLeaoSergio]
 - Release: version 1.0.0 🚀 [WagnoLeaoSergio]
 
